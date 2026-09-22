@@ -14,12 +14,21 @@ const Contact = () => {
                 <img src="/images/photo.png" alt="Sergey" className="w-20 rounded-full" />
                 <h3>Let's Connect</h3>
                 <p>serhento@gmail.com</p>
+                <a
+                    className="text-blue-600 underline underline-offset-4"
+                    href="https://sergeyX.github.io/mac_portfolio/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    title="My Portfolio"
+                >
+                    My Portfolio Link
+                </a>
 
-                <ul>
+                <ul className="mt-5">
                     {socials.map(({ id, bg, link, icon, text }) => (
                         <li key={id} style={{ backgroundColor: bg }}>
                             <a href={link} target="_blank" rel="noopener noreferrer" title={text}>
-                                <img src={icon} alt="text" className="size-5" />
+                                <img src={`/mac_portfolio/${icon}`} alt="text" className="size-5" />
                                 <p>{text}</p>
                             </a>
                         </li>

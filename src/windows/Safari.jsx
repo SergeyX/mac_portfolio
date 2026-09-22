@@ -44,7 +44,7 @@ const Safari = () => {
                     {blogPosts.map(({ id, image, title, date, link }) => (
                         <div key={id} className="blog-post">
                             <div className="col-span-2">
-                                <img src={image} alt={title} />
+                                <img src={`/mac_portfolio/${image}`} alt={title} />
                             </div>
                             <div className="content">
                                 <p>{date}</p>

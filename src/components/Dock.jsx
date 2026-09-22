@@ -3,8 +3,8 @@ import { Tooltip } from 'react-tooltip';
 import { useGSAP } from '@gsap/react';
 import gsap from 'gsap';
 
-import { dockApps } from '../constants/constants.js';
-import useWindowStore from '../store/window.js';
+import { dockApps } from "#constants/constants.js";
+import useWindowStore from "#store/window.js";
 
 const Dock = () => {
     const { openWindow, closeWindow, windows } = useWindowStore();
@@ -87,7 +87,7 @@ const Dock = () => {
                                 disabled={!canOpen}
                                 onClick={() => toggleApp({ id, canOpen })}
                             >
-                                <img src={`/images/${icon}`} alt={name} loading="lazy" className={canOpen ? "" : "opacity-60"} />
+                                <img src={`/mac_portfolio/images/${icon}`} alt={name} loading="lazy" className={canOpen ? "" : "opacity-60"} />
                             </button>
                         </div>
                     ))

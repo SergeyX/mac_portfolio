@@ -26,6 +26,7 @@ const Home = () => {
 
     useGSAP(() => {
         Draggable.create(".folder");
+        Draggable.create(".resume");
     }, []);
     return (
         <section id="home">
@@ -36,7 +37,7 @@ const Home = () => {
                         className={clsx("group folder", project.windowPosition)}
                         onClick={() => handleOpenProjectFinder(project)}
                     >
-                        <img src="/images/folder.png" alt={project.name} />
+                        <img src="/mac_portfolio/images/folder.png" alt={project.name} />
                         <p>{project.name}</p>
                     </li>
                 ))}
@@ -45,10 +46,11 @@ const Home = () => {
                 {resumeArr.map((resume) => (
                     <li
                         key={resume.id}
-                        className={resume.position}
+                        className={clsx("resume", resume.position)}
+                        // className={resume.position}
                         onClick={() => openResume(resume)}
                     >
-                        <img src={resume.icon} alt={resume.name} />
+                        <img src={`/mac_portfolio/${resume.icon}`} alt={resume.name} />
                         <p>{resume.name}</p>
                     </li>
                 ))}

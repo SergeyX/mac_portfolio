@@ -25,7 +25,7 @@ const Photos = () => {
                     <ul>
                         {photosLinks.map(({ id, icon, title }) => (
                             <li key={id}>
-                                <img src={icon} alt={title} />
+                                <img src={`/mac_portfolio${icon}`} alt={title} />
                                 <p>{title}</p>
                             </li>
                         ))}
@@ -40,13 +40,13 @@ const Photos = () => {
                                 onClick={() => openWindow("imgfile", {
                                     id,
                                     name: "Gallery image",
-                                    icon: "/images/image.png",
+                                    icon: "/mac_portfolio/images/image.png",
                                     kind: "file",
                                     fileType: "img",
                                     imageUrl: img,
                                 })}
                             >
-                                <img src={img} alt={`Gallery image ${id}`} />
+                                <img src={`/mac_portfolio/${img}`} alt={`Gallery image ${id}`} />
                             </li>
                         ))}
                     </ul>

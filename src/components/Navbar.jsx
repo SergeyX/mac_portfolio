@@ -8,7 +8,7 @@ const Navbar = () => {
     return (
         <nav>
             <div>
-                <img src="/images/logo.svg" alt="logo" />
+                <img src="/mac_portfolio/images/logo.svg" alt="logo" />
                 <p className="font-bold">Sergey's Portfolio</p>
                 <ul>
                     {navLinks.map(({ id, name, type }) => (
@@ -22,7 +22,7 @@ const Navbar = () => {
                 <ul>
                     {navIcons.map(({ id, img }) => (
                         <li key={id}>
-                            <img src={img} className="icon-hover" alt={`icon-${img}`} />
+                            <img src={`/mac_portfolio/${img}`} className="icon-hover" alt={`icon-${img}`} />
                         </li>
                     ))}
                 </ul>
